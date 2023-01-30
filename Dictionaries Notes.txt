@@ -1,0 +1,39 @@
+mylist = ['a', 'b', 'c', 'd']
+    to print c:
+    print(mylsit[2])
+
+Dictionaries
+*******************************************************************
+--- Keys & Values ---
+the key will always be on the left & value on the right
+    - key will always be text & value can be whatever
+    - values can be any python value
+    - starts with a square bracket '[]' like a list
+
+dictionaries are mutable objects
+    - keys have to be unique ... they cannot repeat
+    - default for the dictionaries are the keys if nothing is specified
+
+values
+    - the funciton  '.values' only iterates thrugh the values of the dictionaries
+--- key syntax ---
+[{"key": "value",...}]
+
+.get
+    - if value is not found, it adds the default value 
+
+.clear
+    - clears out the elements in the object
+
+.pop
+    - removes the key value pair
+
+.popitem
+    - pops it out of the dictionary and adds a "random" key value pair
+    - actually pops out the last item
+
+.random.choice
+    - selects a random key
+
+values can be lists
+
