@@ -206,3 +206,18 @@ ProduceDictionary = {
         'total': 21.87
     }
 }
+
+for produce in ProduceDictionary:
+
+    cost = ProduceDictionary[produce]["cost"]
+    amt_sold = ProduceDictionary[produce]["amt_sold"]
+    calc_total = round(cost * amt_sold, 2)
+
+    stated_total = ProduceDictionary[produce]['total']
+
+    if calc_total != stated_total:
+        print(f"Produce Name: {produce}")
+        print(f"Calculated Total: ${calc_total:.2f}")
+        print(f"Stated Total: ${stated_total:.2f}")
+        print()
+        print()
