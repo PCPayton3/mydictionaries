@@ -50,17 +50,18 @@ for eq in earthquakes['features']:
         longitude = eq['geometry']['coordinates'][0]
         latitude = eq['geometry']['coordinates'][1]
 
-        eq_dict = {
-            "Location": location,
+        eq_dict[location] = {
             "Magnitude": magnitude,
             "Longitude": longitude,
             "Latitude": latitude
         }
 
-        # print(eq_dict)
+        print()
 
-        print('\n\n\n')
-        print("Location:", eq_dict['Location'])
-        print("Magnitude", eq_dict['Magnitude'])
-        print("Longitude", eq_dict['Longitude'])
-        print("Latitude", eq_dict['Latitude'])
+        print('Location:', location)
+        for i, j in eq_dict[location].items():
+            print(i+":", j)
+
+        print('\n\n')
+
+print(eq_dict)
