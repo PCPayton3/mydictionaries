@@ -39,7 +39,6 @@ infile = open('eq_data.json', 'r')
 earthquakes = json.load(infile)
 
 print(f'Total number of eathquakes: {len(earthquakes["features"])}')
-print('\n\n')
 
 
 eq_dict = {}
@@ -65,11 +64,3 @@ for eq in earthquakes['features']:
         print("Magnitude", eq_dict['Magnitude'])
         print("Longitude", eq_dict['Longitude'])
         print("Latitude", eq_dict['Latitude'])
-
-    '''
-        print("Location:", location)
-        print("Magnitude:", magnitude)
-        print("Longitude:", longitude)
-        print("Latitude:", latitude)
-        print("\n\n\n")
-    '''
