@@ -75,7 +75,7 @@ print('*****  end section 4 ********')
 print()
 
 
-
+"""
 
 
 print()
@@ -99,7 +99,7 @@ print()
 print('*****  end section 5 ********')
 print()
 
-
+"""
 
 
 
@@ -152,7 +152,7 @@ print()
 print('*****  end section 8 ********')
 print()
 
-"""
+
 
 print()
 print('*****  start section 9 - using random and converting to list ********')
@@ -167,3 +167,5 @@ print(phonebook[random.choice(list(phonebook))])
 print()
 print('*****  end section 9 ********')
 print()
+
+"""
