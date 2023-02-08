@@ -32,16 +32,44 @@ Latitude: 14.7628
 
 '''
 
-
+# if you use a key as a varible hardcoded, there is only one key
 import json
 
 infile = open('eq_data.json', 'r')
-eq_dict = json.load(infile)
+earthquakes = json.load(infile)
 
-print(f'Total number of eathquakes: {len(eq_dict["features"])}')
+print(f'Total number of eathquakes: {len(earthquakes["features"])}')
 print('\n\n')
 
 
-for location in eq_dict.items(property['mag']):
+eq_dict = {}
 
-    print(location)
+for eq in earthquakes['features']:
+    if eq['properties']['mag'] > 6:
+        magnitude = eq['properties']['mag']
+        location = eq['properties']['place']
+        longitude = eq['geometry']['coordinates'][0]
+        latitude = eq['geometry']['coordinates'][1]
+
+        eq_dict = {
+            "Location": location,
+            "Magnitude": magnitude,
+            "Longitude": longitude,
+            "Latitude": latitude
+        }
+
+        # print(eq_dict)
+
+        print('\n\n\n')
+        print("Location:", eq_dict['Location'])
+        print("Magnitude", eq_dict['Magnitude'])
+        print("Longitude", eq_dict['Longitude'])
+        print("Latitude", eq_dict['Latitude'])
+
+    '''
+        print("Location:", location)
+        print("Magnitude:", magnitude)
+        print("Longitude:", longitude)
+        print("Latitude:", latitude)
+        print("\n\n\n")
+    '''
